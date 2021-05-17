@@ -64,8 +64,18 @@ resource "aws_elb" "vault" {
 # ATTACH THE ELB TO THE VAULT ASG
 # ---------------------------------------------------------------------------------------------------------------------
 
-resource "aws_autoscaling_attachment" "vault" {
-  autoscaling_group_name = var.vault_asg_name
+resource "aws_autoscaling_attachment" "vault_1a" {
+  autoscaling_group_name = var.vault_asg_name_1a
+  elb                    = aws_elb.vault.id
+}
+
+resource "aws_autoscaling_attachment" "vault_1b" {
+  autoscaling_group_name = var.vault_asg_name_1b
+  elb                    = aws_elb.vault.id
+}
+
+resource "aws_autoscaling_attachment" "vault_1c" {
+  autoscaling_group_name = var.vault_asg_name_1c
   elb                    = aws_elb.vault.id
 }
 
