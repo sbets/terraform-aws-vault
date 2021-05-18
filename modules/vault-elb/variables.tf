@@ -16,15 +16,7 @@ variable "allowed_inbound_cidr_blocks" {
   type        = list(string)
 }
 
-variable "vault_asg_name_1a" {
-  description = "Name of the Vault Autoscaling Group"
-}
-
-variable "vault_asg_name_1b" {
-  description = "Name of the Vault Autoscaling Group"
-}
-
-variable "vault_asg_name_1c" {
+variable "vault_asg_name" {
   description = "Name of the Vault Autoscaling Group"
 }
 
