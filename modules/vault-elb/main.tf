@@ -74,11 +74,6 @@ resource "aws_autoscaling_attachment" "vault_1b" {
   elb                    = aws_elb.vault.id
 }
 
-resource "aws_autoscaling_attachment" "vault_1c" {
-  autoscaling_group_name = var.vault_asg_name_1c
-  elb                    = aws_elb.vault.id
-}
-
 # ---------------------------------------------------------------------------------------------------------------------
 # CREATE THE SECURITY GROUP THAT CONTROLS WHAT TRAFFIC CAN GO IN AND OUT OF THE ELB
 # ---------------------------------------------------------------------------------------------------------------------
