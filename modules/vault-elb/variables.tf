@@ -24,10 +24,6 @@ variable "vault_asg_name_1b" {
   description = "Name of the Vault Autoscaling Group"
 }
 
-variable "vault_asg_name_1c" {
-  description = "Name of the Vault Autoscaling Group"
-}
-
 # ---------------------------------------------------------------------------------------------------------------------
 # OPTIONAL PARAMETERS
 # These parameters have reasonable defaults.
